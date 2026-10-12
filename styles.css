@@ -215,3 +215,30 @@ footer a:hover {
     background-color: #45034F;
     border-color: #45034F;
 }
+
+
+.contact .form-control:valid {
+    border-color: #6B1877;
+}
+
+.contact .form-control:invalid {
+    border-color: #E076FC;
+}
+
+.contact .form-control:valid ~ .valid-feedback {
+    display: block;
+    color: #6B1877;
+}
+
+.contact .form-control:valid ~ .invalid-feedback {
+    display: none;
+}
+
+.contact .form-control:invalid ~ .invalid-feedback {
+    display: block;
+    color: #6B1877;
+}
+
+.contact .form-control:invalid ~ .valid-feedback {
+    display: none;
+}
