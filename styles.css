@@ -110,6 +110,12 @@ textarea {
     resize: vertical;
 }
 
+input::placeholder,
+textarea::placeholder {
+    color: #6B1877;
+    opacity: 0.65;
+}
+
 button {
     background-color: #6B1877;
     color: #F8E8FF;
@@ -170,4 +176,42 @@ footer a:hover {
     h2 {
         font-size: 26px;
     }
+}
+
+.form-control {
+    background-color: #F8E8FF;
+    border: 1px solid #E076FC;
+    color: #45034F;
+}
+
+.form-control:focus {
+    background-color: #F8E8FF;
+    border-color: #6B1877;
+    box-shadow: 0 0 0 3px rgba(224, 118, 252, 0.2);
+    color: #45034F;
+}
+
+.form-control::placeholder {
+    color: #6B1877;
+    opacity: 0.65;
+}
+
+.form-label {
+    color: #45034F;
+    font-weight: bold;
+}
+
+.form-text {
+    color: #6B1877;
+}
+
+.btn-primary {
+    background-color: #6B1877;
+    border-color: #6B1877;
+    color: #F8E8FF;
+}
+
+.btn-primary:hover {
+    background-color: #45034F;
+    border-color: #45034F;
 }
