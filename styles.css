@@ -153,31 +153,6 @@ footer a:hover {
     text-decoration: underline;
 }
 
-@media (max-width: 600px) {
-    .site-header {
-        justify-content: center;
-        text-align: center;
-        padding: 20px;
-    }
-
-    .site-nav {
-        justify-content: center;
-    }
-
-    main {
-        margin: 25px auto;
-        padding: 0 15px;
-    }
-
-    section {
-        padding: 25px 20px;
-    }
-
-    h2 {
-        font-size: 26px;
-    }
-}
-
 .form-control {
     background-color: #F8E8FF;
     border: 1px solid #E076FC;
@@ -215,34 +190,6 @@ footer a:hover {
     background-color: #45034F;
     border-color: #45034F;
 }
-
-
-.contact .form-control:valid {
-    border-color: #6B1877;
-}
-
-.contact .form-control:invalid {
-    border-color: #E076FC;
-}
-
-.contact .form-control:valid ~ .valid-feedback {
-    display: block;
-    color: #6B1877;
-}
-
-.contact .form-control:valid ~ .invalid-feedback {
-    display: none;
-}
-
-.contact .form-control:invalid ~ .invalid-feedback {
-    display: block;
-    color: #6B1877;
-}
-
-.contact .form-control:invalid ~ .valid-feedback {
-    display: none;
-}
-
 
 .form-select {
     background-color: #F8E8FF;
@@ -282,6 +229,24 @@ footer a:hover {
     color: #45034F;
 }
 
+.contact .form-control:valid ~ .valid-feedback {
+    display: block;
+    color: #198754;
+}
+
+.contact .form-control:valid ~ .invalid-feedback {
+    display: none;
+}
+
+.contact .form-control:invalid ~ .invalid-feedback {
+    display: block;
+    color: #dc3545;
+}
+
+.contact .form-control:invalid ~ .valid-feedback {
+    display: none;
+}
+
 .contact .form-select:valid ~ .valid-feedback {
     display: block;
     color: #6B1877;
@@ -290,4 +255,82 @@ footer a:hover {
 .contact .form-select:invalid ~ .invalid-feedback {
     display: block;
     color: #6B1877;
+}
+
+.validation-form .form-control:invalid,
+.validation-form .form-control.is-valid:invalid {
+    border-color: #dc3545;
+    background-image: none;
+}
+
+.validation-form .form-control:valid,
+.validation-form .form-control.is-invalid:valid {
+    border-color: #198754;
+    background-image: none;
+}
+
+.validation-form .col-12:has(.form-control:invalid)::after {
+    content: "!";
+    color: #dc3545;
+}
+
+.validation-form .col-12:has(.form-control:valid)::after {
+    content: "✓";
+    color: #198754;
+}
+
+.validation-form .col-12:has(.form-control) {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 30px;
+    align-items: center;
+}
+
+.validation-form .form-label {
+    grid-column: 1 / 3;
+}
+
+.validation-form .form-control {
+    grid-column: 1 / 3;
+    grid-row: 2;
+    padding-right: 45px;
+}
+
+.validation-form .col-12:has(.form-control)::after {
+    grid-column: 2;
+    grid-row: 2;
+    justify-self: center;
+    z-index: 1;
+    font-size: 20px;
+    font-weight: bold;
+    pointer-events: none;
+}
+
+.validation-form .valid-feedback,
+.validation-form .invalid-feedback {
+    grid-column: 1 / 3;
+}
+
+@media (max-width: 600px) {
+    .site-header {
+        justify-content: center;
+        text-align: center;
+        padding: 20px;
+    }
+
+    .site-nav {
+        justify-content: center;
+    }
+
+    main {
+        margin: 25px auto;
+        padding: 0 15px;
+    }
+
+    section {
+        padding: 25px 20px;
+    }
+
+    h2 {
+        font-size: 26px;
+    }
 }

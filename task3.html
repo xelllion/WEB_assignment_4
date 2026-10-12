@@ -9,7 +9,6 @@
           rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
 
 <header class="site-header">
@@ -25,14 +24,14 @@
 </header>
 
 <main>
-    <section class="contact">
+    <section class="contact validation-form">
         <h2>Contact Us</h2>
         <p>
             Have a question about our carpets?
             Fill out the form below to contact us.
         </p>
 
-        <form>
+        <form class="was-validated">
             <div class="row g-3">
                 <div class="col-12">
                     <label for="name" class="form-label">Name</label>
@@ -41,7 +40,9 @@
                            placeholder="Enter your name"
                            required minlength="2" maxlength="50">
                     <div class="valid-feedback">Looks good!</div>
-                    <div class="invalid-feedback">Name is required (at least 2 characters).</div>
+                    <div class="invalid-feedback">
+                        Name must have at least 2 characters.
+                    </div>
                 </div>
 
                 <div class="col-12">
@@ -51,7 +52,9 @@
                            placeholder="Enter your email"
                            required maxlength="100">
                     <div class="valid-feedback">Looks good!</div>
-                    <div class="invalid-feedback">Please enter a valid email address.</div>
+                    <div class="invalid-feedback">
+                        Please enter a valid email address.
+                    </div>
                 </div>
 
                 <div class="col-12">
@@ -61,11 +64,15 @@
                               placeholder="Write your message here"
                               required minlength="10" maxlength="500"></textarea>
                     <div class="valid-feedback">Looks good!</div>
-                    <div class="invalid-feedback">Message must have at least 10 characters.</div>
+                    <div class="invalid-feedback">
+                        Message must have at least 10 characters.
+                    </div>
                 </div>
 
                 <div class="col-12">
-                    <button type="submit" class="btn btn-primary">Submit</button>
+                    <button type="submit" class="btn btn-primary">
+                        Submit
+                    </button>
                 </div>
             </div>
         </form>
